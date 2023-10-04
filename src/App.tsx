@@ -53,7 +53,7 @@ function App() {
                 className={""}
                 currencyOption={options}
                 onAmountChange={(amount) => setAmount(amount)}
-                onCurrencyChange={() => setAmount(amount)}
+                onCurrencyChange={(currency) => setFrom(currency)}
               />
             </div>
             <div className="relative w-full h-0.5">
