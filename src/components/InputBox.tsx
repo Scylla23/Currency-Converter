@@ -1,11 +1,11 @@
 interface InputBoxProps{
     label?: string;
     amount?: number;
-    selectCurrency: string;
-    amountDisabled: boolean;
-    currencyDisable: boolean;
-    className: string;
-    currencyOption: string[];
+    selectCurrency?: string;
+    amountDisabled?: boolean;
+    currencyDisable?: boolean;
+    className?: string;
+    currencyOption?: string[];
     onAmountChange: (arg1: number) => void;
     onCurrencyChange: (arg1: string) => void;
 
@@ -25,7 +25,7 @@ const InputBox: React.FC<InputBoxProps> = ({
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
       <div className="w-1/2">
-        <label className="text-black/40 mb-2 inline-block">{label}</label>
+        <label className="text-black/50 mb-2 inline-block">{label}</label>
         <input
           className="outline-none w-full bg-transparent py-1.5"
           type="number"

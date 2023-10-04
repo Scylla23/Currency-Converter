@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-interface Currency {
-  currency: string;
-}
 
-function useCurrencyInfo(Currency: Currency) {
+
+function useCurrencyInfo(currency: string) {
     const [data,setData] = useState({});
-  let currency = Currency.currency;
   useEffect(() => {
     axios
       .get(
@@ -21,7 +18,7 @@ function useCurrencyInfo(Currency: Currency) {
       .catch((error) => console.log(error));
 
 
-  }, [Currency]);
+  }, [currency]);
 
   return data;
 }
